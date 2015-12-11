@@ -41,9 +41,9 @@ public class Instructor
    
    public String toString()
    {
-      String str = "Last Name: " + lastName + 
-                  "\nFirst Name: " + firstName + 
-                  "\nOffice Number: " + officeNumber;
+      String str = "First Name: " + firstName +  
+                   "\nLast Name: " + lastName + 
+                   "\nOffice Number: " + officeNumber;
       return str;           
        
    }
@@ -58,7 +58,7 @@ public class Instructor
       if (obj != null && obj instanceof Instructor)
       {
          Instructor temp = (Instructor)obj;
-         if (officeNumber.equalsIgnoreCase(temp.officeNumber))
+         if (officeNumber.hashCode() == temp.officeNumber.hashCode())
             return true;
          else
             return false;
