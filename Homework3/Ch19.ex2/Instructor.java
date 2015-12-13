@@ -41,16 +41,41 @@ public class Instructor
    
    public String toString()
    {
-      String str = "Last Name: " + lastName + 
-                  "\nFirst Name: " + firstName + 
-                  "\nOffice Number: " + officeNumber;
+      String str =  "First Name: " + firstName + 
+                    "\nLast Name: " + lastName + 
+                    "\nOffice Number: " + officeNumber;
       return str;           
        
    }
    
-   public int hashCode()
+    public int hashCodeFirstName()
+   {
+      return firstName.hashCode();
+   }
+   
+   public int hashCodeLastName()
+   {
+      return lastName.hashCode();
+   }
+   
+   public int hashCodeOfficeNumber()
    {
       return officeNumber.hashCode();
+   }
+   
+   public String getFirstName()
+   {
+      return firstName;
+   }
+   
+   public String getLastName()
+   {
+      return lastName;
+   }
+   
+   public String getOfficeNumber()
+   {
+      return officeNumber;
    }
    
    public boolean equals(Object obj)
@@ -58,7 +83,9 @@ public class Instructor
       if (obj != null && obj instanceof Instructor)
       {
          Instructor temp = (Instructor)obj;
-         if (officeNumber.equalsIgnoreCase(temp.officeNumber))
+         if (officeNumber.equalsIgnoreCase(temp.officeNumber) || 
+             firstName.equalsIgnoreCase(temp.firstName) ||
+             lastName.equalsIgnoreCase(temp.lastName))
             return true;
          else
             return false;
