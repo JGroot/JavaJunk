@@ -1,7 +1,7 @@
 /*
       Jessica Groot
       12/07/2015
-      Chapter 19, Challange 2
+      Chapter 19, Challenge 2
       Java II
       
       Chapter 9 presented an Instructor class that 
